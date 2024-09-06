@@ -112,7 +112,6 @@ bot.on('text', async (ctx) => {
                     return;
             }
 
-            // Показываем погоду после изменения единиц измерения, если город был установлен
             const userCity = userSessions[chatId]?.city;
             if (userCity) {
                 const weatherData = await WeatherService.getWeather(userCity, userSessions[chatId]?.units);
@@ -141,7 +140,6 @@ bot.command('mycity', async (ctx) => {
     }
 });
 
-// Обработка геолокации
 bot.on('location', async (ctx) => {
     const chatId = ctx.chat?.id?.toString();
     if (chatId) {
