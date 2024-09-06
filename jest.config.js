@@ -7,7 +7,7 @@ const config = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   transformIgnorePatterns: [
-    '<rootDir>/node_modules/(?!chai-as-promised|check-error)' // чтобы обойти проблему с импортами из node_modules
+    '<rootDir>/node_modules/(?!chai-as-promised|check-error)'
   ],
 };
 
